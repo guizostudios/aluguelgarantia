@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'withdraw_sheet_widget.dart' show WithdrawSheetWidget;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +21,6 @@ class WithdrawSheetModel extends FlutterFlowModel<WithdrawSheetWidget> {
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
-  // Stores action output result for [Custom Action - transferOrWithdraw] action in Container widget.
-  String? withdrawTxHash;
 
   /// Initialization and disposal methods.
 

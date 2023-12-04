@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>NegocioSeguro</string>
+	<string>AluguelGarantia</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 
@@ -26,10 +26,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>negocioseguro.com</string>
+        <string>aluguelgarantia.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>negocioseguro</string>
+        <string>aluguelgarantia</string>
         </array>
         </dict>
     </array>

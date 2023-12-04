@@ -7,23 +7,28 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-Future<String> borrowFunds(
+import 'dart:js_util';
+
+Future<String> createRentLockWalletbkp(
   String contractAddress,
   String className,
-  String amount,
-  String startDate,
+  String taker,
+  String fee,
+  String securityDeposit,
+  String rentAmount,
   String endDate,
+  String daysForPayment,
 ) async {
-  final bigIntAmount = BigInt.from(int.parse(amount));
-  final startDate = BigInt.from(int.parse(startDate));
-  final endDate = BigInt.from(int.parse(endDate));
   final txHash = await blockchainTransaction(
     contractAddress,
     className,
-    'borrowFunds',
-    [bigIntAmount],
-    [startDate],
+    'createRentLockWallet',
+    [taker],
+    [fee],
+    [securityDeposit],
+    [rentAmount],
     [endDate],
+    [daysForPayment],
   );
   return txHash;
 }

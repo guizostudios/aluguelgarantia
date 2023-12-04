@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "NegocioSeguro" "\0"
+            VALUE "CompanyName", "AluguelGarantia" "\0"
             VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "NegocioSeguro" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2022 NegocioSeguro. All rights reserved." "\0"
-            VALUE "OriginalFilename", "negocio_seguro.exe" "\0"
-            VALUE "ProductName", "NegocioSeguro" "\0"
+            VALUE "InternalName", "AluguelGarantia" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 AluguelGarantia. All rights reserved." "\0"
+            VALUE "OriginalFilename", "aluguel_garantia.exe" "\0"
+            VALUE "ProductName", "AluguelGarantia" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

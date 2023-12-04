@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(negocio_seguro LANGUAGES CXX)
+project(aluguel_garantia LANGUAGES CXX)
 
-set(BINARY_NAME "negocio_seguro")
+set(BINARY_NAME "aluguel_garantia")
 
 cmake_policy(SET CMP0063 NEW)
 

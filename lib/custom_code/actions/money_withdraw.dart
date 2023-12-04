@@ -7,20 +7,18 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-Future<String> refundNFTToBuyer(
+Future<String> moneyWithdraw(
   String contractAddress,
   String className,
   String id,
-  String address,
 ) async {
   final bigIntId = BigInt.from(int.parse(id));
-  final address = BigInt.from(int.parse(address));
+
   final txHash = await blockchainTransaction(
     contractAddress,
     className,
-    'refundNFTToBuyer',
+    'moneyWithdraw',
     [bigIntId],
-    [address],
   );
   return txHash;
 }

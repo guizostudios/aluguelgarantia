@@ -45,7 +45,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="negocioseguro" android:host="negocioseguro.com" />
+                <data android:scheme="aluguelgarantia" android:host="aluguelgarantia.com" />
             </intent-filter>
 
         </activity>

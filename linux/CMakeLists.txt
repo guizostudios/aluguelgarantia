@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "NegocioSeguro")
+set(BINARY_NAME "AluguelGarantia")
 set(APPLICATION_ID "com.company.blockchainDemo")
 
 cmake_policy(SET CMP0063 NEW)

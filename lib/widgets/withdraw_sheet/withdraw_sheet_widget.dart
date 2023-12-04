@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -176,82 +175,7 @@ class _WithdrawSheetWidgetState extends State<WithdrawSheetWidget>
                 focusColor: Colors.transparent,
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
-                onTap: () async {
-                  if ((_model.textController.text != null &&
-                          _model.textController.text != '') &&
-                      !_model.isProcessing) {
-                    HapticFeedback.lightImpact();
-                    setState(() {
-                      _model.isProcessing = true;
-                    });
-                    _model.withdrawTxHash = await actions.transferOrWithdraw(
-                      FFAppState().contractAddress,
-                      FFAppState().className,
-                      _model.textController.text,
-                      '=XTokendoTesouro',
-                    );
-                    _model.updatePage(() {
-                      FFAppState()
-                          .addToTransactionHashes(_model.withdrawTxHash!);
-                    });
-                    ScaffoldMessenger.of(context).clearSnackBars();
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          'Processing withdrawal...',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.white,
-                            fontSize: 14.0,
-                          ),
-                        ),
-                        duration: Duration(milliseconds: 2000),
-                        backgroundColor: FlutterFlowTheme.of(context).tertiary,
-                      ),
-                    );
-                    Navigator.pop(context);
-                  } else {
-                    if (_model.isProcessing) {
-                      ScaffoldMessenger.of(context).clearSnackBars();
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'Already in process...',
-                            style: GoogleFonts.getFont(
-                              'Poppins',
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              fontSize: 14.0,
-                            ),
-                          ),
-                          duration: Duration(milliseconds: 2000),
-                          backgroundColor:
-                              FlutterFlowTheme.of(context).primaryText,
-                        ),
-                      );
-                    } else {
-                      ScaffoldMessenger.of(context).clearSnackBars();
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'Please enter an amount',
-                            style: GoogleFonts.getFont(
-                              'Poppins',
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              fontSize: 14.0,
-                            ),
-                          ),
-                          duration: Duration(milliseconds: 2000),
-                          backgroundColor:
-                              FlutterFlowTheme.of(context).primaryText,
-                        ),
-                      );
-                    }
-                  }
-
-                  setState(() {});
-                },
+                onTap: () async {},
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(

@@ -7,14 +7,18 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-Future<String> repayFunds(
+Future<String> getTaker(
   String contractAddress,
   String className,
+  String id,
 ) async {
+  final bigIntId = BigInt.from(int.parse(id));
+
   final txHash = await blockchainTransaction(
     contractAddress,
     className,
-    'repayFunds',
+    'getTaker',
+    [bigIntId],
   );
   return txHash;
 }

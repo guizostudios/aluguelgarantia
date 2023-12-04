@@ -7,17 +7,26 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-Future<String> purchaseNFT(
+Future<String> createRentLockWallet(
   String contractAddress,
   String className,
-  String amount,
+  String taker,
+  String fee,
+  String securityDeposit,
+  String rentAmount,
+  String endDate,
+  String daysForPayment,
 ) async {
-  final bigIntAmount = BigInt.from(int.parse(amount));
   final txHash = await blockchainTransaction(
     contractAddress,
     className,
-    'purchaseNFT',
-    [bigIntAmount],
+    'createRentLockWallet',
+    [taker],
+    [fee],
+    [securityDeposit],
+    [rentAmount],
+    [endDate],
+    [daysForPayment],
   );
   return txHash;
 }

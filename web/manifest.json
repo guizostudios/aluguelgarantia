@@ -1,6 +1,6 @@
 {
-    "name": "NegocioSeguro",
-    "short_name": "NegocioSeguro",
+    "name": "AluguelGarantia",
+    "short_name": "AluguelGarantia",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

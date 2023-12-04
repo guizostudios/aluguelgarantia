@@ -7,20 +7,18 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-Future<String> transferOrWithdraw(
+Future<String> getOwner(
   String contractAddress,
   String className,
-  String amount,
-  String ERC20Address,
+  String id,
 ) async {
-  final bigIntAmount = BigInt.from(int.parse(amount));
-  final ERC20Address = BigInt.from(int.parse(ERC20Address));
+  final bigIntId = BigInt.from(int.parse(id));
+
   final txHash = await blockchainTransaction(
     contractAddress,
     className,
-    'transferOrWithdraw',
-    [bigIntAmount],
-    [ERC20Address],
+    'getOwner',
+    [bigIntId],
   );
   return txHash;
 }
